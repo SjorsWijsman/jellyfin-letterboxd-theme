@@ -1,0 +1,391 @@
+/* Base Scyfin Oled theme */
+@import url("https://cdn.jsdelivr.net/gh/loof2736/scyfin@latest/CSS/scyfin-theme.css");
+@import url("https://cdn.jsdelivr.net/gh/loof2736/scyfin@latest/CSS/theme-oled.css");
+@import url("https://cdn.jsdelivr.net/gh/loof2736/scyfin@latest/CSS/disable-static-drawer.css");
+
+/* Letterboxd fonts */
+@font-face {
+  font-family: TiemposHeadlineWeb;
+  src: url(https://s.ltrbxd.com/fonts/TiemposHeadlineWeb-Bold.eot);
+  src:
+    url(https://s.ltrbxd.com/fonts/TiemposHeadlineWeb-Bold.eot?#iefix)
+      format("embedded-opentype"),
+    url(https://s.ltrbxd.com/fonts/TiemposHeadlineWeb-Bold.woff2)
+      format("woff2"),
+    url(https://s.ltrbxd.com/fonts/TiemposHeadlineWeb-Bold.woff) format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: TiemposHeadlineWeb;
+  src: url(https://s.ltrbxd.com/fonts/TiemposHeadlineWeb-BoldItalic.eot);
+  src:
+    url(https://s.ltrbxd.com/fonts/TiemposHeadlineWeb-BoldItalic.eot?#iefix)
+      format("embedded-opentype"),
+    url(https://s.ltrbxd.com/fonts/TiemposHeadlineWeb-BoldItalic.woff2)
+      format("woff2"),
+    url(https://s.ltrbxd.com/fonts/TiemposHeadlineWeb-BoldItalic.woff)
+      format("woff");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: TiemposTextWeb;
+  src: url(https://s.ltrbxd.com/fonts/TiemposTextWeb-Regular.eot);
+  src:
+    url(https://s.ltrbxd.com/fonts/TiemposTextWeb-Regular.eot?#iefix)
+      format("embedded-opentype"),
+    url(https://s.ltrbxd.com/fonts/TiemposTextWeb-Regular.woff2) format("woff2"),
+    url(https://s.ltrbxd.com/fonts/TiemposTextWeb-Regular.woff) format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: TiemposTextWeb;
+  src: url(https://s.ltrbxd.com/fonts/TiemposTextWeb-RegularItalic.eot);
+  src:
+    url(https://s.ltrbxd.com/fonts/TiemposTextWeb-RegularItalic.eot?#iefix)
+      format("embedded-opentype"),
+    url(https://s.ltrbxd.com/fonts/TiemposTextWeb-RegularItalic.woff2)
+      format("woff2"),
+    url(https://s.ltrbxd.com/fonts/TiemposTextWeb-RegularItalic.woff)
+      format("woff");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: TiemposTextWeb;
+  src: url(https://s.ltrbxd.com/fonts/TiemposTextWeb-Semibold.eot);
+  src:
+    url(https://s.ltrbxd.com/fonts/TiemposTextWeb-Semibold.eot?#iefix)
+      format("embedded-opentype"),
+    url(https://s.ltrbxd.com/fonts/TiemposTextWeb-Semibold.woff2)
+      format("woff2"),
+    url(https://s.ltrbxd.com/fonts/TiemposTextWeb-Semibold.woff) format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: TiemposTextWeb;
+  src: url(https://s.ltrbxd.com/fonts/TiemposTextWeb-SemiboldItalic.eot);
+  src:
+    url(https://s.ltrbxd.com/fonts/TiemposTextWeb-SemiboldItalic.eot?#iefix)
+      format("embedded-opentype"),
+    url(https://s.ltrbxd.com/fonts/TiemposTextWeb-SemiboldItalic.woff2)
+      format("woff2"),
+    url(https://s.ltrbxd.com/fonts/TiemposTextWeb-SemiboldItalic.woff)
+      format("woff");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: GraphikWeb;
+  src: url(https://s.ltrbxd.com/fonts/Graphik-Light-Web.eot);
+  src:
+    url(https://s.ltrbxd.com/fonts/Graphik-Light-Web.eot?#iefix)
+      format("embedded-opentype"),
+    url(https://s.ltrbxd.com/fonts/Graphik-Light-Web.woff) format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: GraphikWeb;
+  src: url(https://s.ltrbxd.com/fonts/Graphik-Regular-Web.eot);
+  src:
+    url(https://s.ltrbxd.com/fonts/Graphik-Regular-Web.eot?#iefix)
+      format("embedded-opentype"),
+    url(https://s.ltrbxd.com/fonts/Graphik-Regular-Web.woff) format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: GraphikWeb;
+  src: url(https://s.ltrbxd.com/fonts/Graphik-RegularItalic-Web.eot);
+  src:
+    url(https://s.ltrbxd.com/fonts/Graphik-RegularItalic-Web.eot?#iefix)
+      format("embedded-opentype"),
+    url(https://s.ltrbxd.com/fonts/Graphik-RegularItalic-Web.woff)
+      format("woff");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: GraphikWeb;
+  src: url(https://s.ltrbxd.com/fonts/Graphik-Semibold-Web.eot);
+  src:
+    url(https://s.ltrbxd.com/fonts/Graphik-Semibold-Web.eot?#iefix)
+      format("embedded-opentype"),
+    url(https://s.ltrbxd.com/fonts/Graphik-Semibold-Web.woff) format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: GraphikWeb;
+  src: url(https://s.ltrbxd.com/fonts/Graphik-SemiboldItalic-Web.eot);
+  src:
+    url(https://s.ltrbxd.com/fonts/Graphik-SemiboldItalic-Web.eot?#iefix)
+      format("embedded-opentype"),
+    url(https://s.ltrbxd.com/fonts/Graphik-SemiboldItalic-Web.woff)
+      format("woff");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: GraphikWeb;
+  src: url(https://s.ltrbxd.com/fonts/Graphik-Bold-Web.eot);
+  src:
+    url(https://s.ltrbxd.com/fonts/Graphik-Bold-Web.eot?#iefix)
+      format("embedded-opentype"),
+    url(https://s.ltrbxd.com/fonts/Graphik-Bold-Web.woff) format("woff");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: GraphikWeb;
+  src:
+    url(https://s.ltrbxd.com/fonts/Graphik-BoldItalic-Web.woff2) format("woff2"),
+    url(https://s.ltrbxd.com/fonts/Graphik-BoldItalic-Web.woff) format("woff");
+  font-weight: 800;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: GraphikWeb;
+  src:
+    url(https://s.ltrbxd.com/fonts/Graphik-Black-Web.woff2) format("woff2"),
+    url(https://s.ltrbxd.com/fonts/Graphik-Black-Web.woff) format("woff");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: GraphikWeb;
+  src:
+    url(https://s.ltrbxd.com/fonts/Graphik-BlackItalic-Web.woff2)
+      format("woff2"),
+    url(https://s.ltrbxd.com/fonts/Graphik-BlackItalic-Web.woff) format("woff");
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: PitchSansWeb;
+  src: url(https://s.ltrbxd.com/fonts/PitchSansWeb-Medium.eot);
+  src:
+    url(https://s.ltrbxd.com/fonts/PitchSansWeb-Medium.eot?#iefix)
+      format("embedded-opentype"),
+    url(https://s.ltrbxd.com/fonts/PitchSansWeb-Medium.woff) format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: PitchSansWeb;
+  src: url(https://s.ltrbxd.com/fonts/PitchSansWeb-MediumItalic.eot);
+  src:
+    url(https://s.ltrbxd.com/fonts/PitchSansWeb-MediumItalic.eot?#iefix)
+      format("embedded-opentype"),
+    url(https://s.ltrbxd.com/fonts/PitchSansWeb-MediumItalic.woff)
+      format("woff");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: ColorEmoji;
+  src:
+    local("Apple Color Emoji"), local("Segoe UI Emoji"),
+    local("Segoe UI Symbol"), local("Noto Color Emoji");
+}
+
+:root {
+  --font-stack-graphik:
+    GraphikWeb, -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans",
+    Meiryo, sans-serif, ColorEmoji;
+  --font-stack-tiempos-headline: TiemposHeadlineWeb, Georgia, serif, ColorEmoji;
+  --font-stack-tiempos-text: TiemposTextWeb, Georgia, serif, ColorEmoji;
+  --font-stack-pitch-sans:
+    PitchSansWeb, Menlo, "Droid Sans Mono", "Lucida Console", Consolas, Monaco,
+    Courier, monospace, ColorEmoji;
+
+  color: #ddeeff;
+}
+
+* {
+  --rounded-cards: 0.33rem !important;
+  --primary-accent-color: #00e054;
+  --secondary-accent-color: #00e05410;
+  --primary-background-color: #14181c;
+  --outline-color: transparent;
+
+  font-family: var(--font-stack-graphik);
+}
+
+.backgroundContainer:not(.withBackdrop):not(
+    .backgroundContainer-transparent
+  )::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url(https://s.ltrbxd.com/static/img/content-bg-CFRqxbz-.png)
+    0 -1px repeat-x !important;
+}
+
+h1,
+h1 * {
+  font-family: var(--font-stack-tiempos-headline) !important;
+  font-weight: 700 !important;
+  font-size: 2rem !important;
+  color: white;
+}
+
+.cardText-secondary,
+.fieldDescription,
+.guide-programNameCaret,
+.listItem .secondary,
+.nowPlayingBarSecondaryText,
+.programSecondaryTitle,
+.secondaryText {
+  color: #abc !important;
+}
+
+/* Cards */
+.card {
+  cursor: default !important;
+}
+
+.card-hoverable:hover .cardOverlayContainer {
+  opacity: 0 !important;
+}
+
+.cardScalable:hover .cardOverlayContainer {
+  opacity: 1 !important;
+}
+
+.cardImageContainer {
+  box-shadow:
+    inset 0 0 0 1px rgba(221, 238, 255, 0.25),
+    0 3px 10px rgba(0, 0, 0, 0.15);
+  transition: box-shadow 0.3s ease-out;
+}
+
+.cardImageContainer:hover {
+  box-shadow:
+    inset 0 0 0 3px rgba(221, 238, 255, 0.5),
+    0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Navigation */
+.headerButton {
+  margin: 0 !important;
+}
+
+.pageTitle.pageTitleWithLogo.pageTitleWithDefaultLogo {
+  display: none !important;
+}
+
+.emby-tab-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.layout-desktop .emby-button-foreground {
+  font-size: 1rem;
+  top: unset !important;
+}
+
+.layout-desktop .headerTabs {
+  margin-top: -53px !important;
+}
+
+/* Frontpage */
+.sectionTitleContainer {
+  color: white;
+  margin-top: 2rem;
+  padding-bottom: 0.25rem;
+}
+
+.sectionTitleContainer h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.sectionTitleTextButton {
+  margin-bottom: -7px !important;
+}
+
+.sectionTitleTextButton .chevron_right {
+  transform: translateY(10%);
+  transition: transform 0.2s ease-out;
+}
+
+.sectionTitleTextButton:hover .chevron_right {
+  transform: translate(30%, 10%);
+}
+
+[dir="ltr"] .emby-scrollbuttons {
+  top: 2rem;
+}
+
+/* Detail Page */
+.detailLogo {
+  background-position-y: bottom;
+  width: 40vw;
+}
+
+.noBackdropTransparency .detailPagePrimaryContainer {
+  background: linear-gradient(
+    to top,
+    var(--primary-background-color),
+    transparent
+  ) !important;
+}
+
+.layout-desktop .headerLeft {
+  margin-left: 15px !important;
+}
+
+.layout-desktop .infoWrapper {
+  margin-top: 270px !important;
+  margin-left: 20.45vw !important;
+}
+
+.layout-desktop .detailSectionContent {
+  background: transparent !important;
+  padding-left: 0 !important;
+}
+
+.layout-desktop .itemMiscInfo {
+  margin-top: 0px !important;
+  margin-left: 0px !important;
+}
+
+.tagline * {
+  text-transform: uppercase;
+  font-size: 1rem !important;
+  font-weight: light;
+  color: #99aabb;
+}
+
+.overview * {
+  font-family: var(--font-stack-tiempos-text) !important;
+  font-size: 1.15rem !important;
+  color: #99aabb;
+  line-height: 1.38461538;
+}

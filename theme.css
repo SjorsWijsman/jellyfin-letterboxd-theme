@@ -210,6 +210,7 @@
     local("Segoe UI Symbol"), local("Noto Color Emoji");
 }
 
+/* Base */
 :root {
   --font-stack-graphik:
     GraphikWeb, -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans",
@@ -269,6 +270,27 @@ h1 * {
   cursor: default !important;
 }
 
+.cardScalable::after {
+  border-radius: var(--rounded-cards);
+  pointer-events: none;
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow:
+    inset 0 0 0 1px rgba(221, 238, 255, 0.25),
+    0 3px 10px rgba(0, 0, 0, 0.15);
+  transition: box-shadow 0.3s ease-out;
+}
+
+.cardScalable:has(a):hover::after {
+  box-shadow:
+    inset 0 0 0 3px rgba(221, 238, 255, 0.5),
+    0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
 .card-hoverable:hover .cardOverlayContainer {
   opacity: 0 !important;
 }
@@ -277,17 +299,17 @@ h1 * {
   opacity: 1 !important;
 }
 
-.cardImageContainer {
-  box-shadow:
-    inset 0 0 0 1px rgba(221, 238, 255, 0.25),
-    0 3px 10px rgba(0, 0, 0, 0.15);
-  transition: box-shadow 0.3s ease-out;
+.cardScalable:has(.playedIndicator) {
+  opacity: 0.2 !important;
+  transition: opacity 0.2s ease-out;
 }
 
-.cardImageContainer:hover {
-  box-shadow:
-    inset 0 0 0 3px rgba(221, 238, 255, 0.5),
-    0 3px 10px rgba(0, 0, 0, 0.15);
+.cardScalable:has(.playedIndicator):hover {
+  opacity: 1 !important;
+}
+
+.cardScalable .playedIndicator {
+  opacity: 0;
 }
 
 .playstatebutton-icon-played {
@@ -355,9 +377,9 @@ h1 * {
 
 .noBackdropTransparency .detailPagePrimaryContainer {
   background: linear-gradient(
-    to top,
-    var(--primary-background-color),
-    transparent
+    to bottom,
+    transparent 0,
+    var(--primary-background-color) min(100%, 24rem)
   ) !important;
 }
 

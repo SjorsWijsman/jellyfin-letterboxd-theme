@@ -290,6 +290,10 @@ h1 * {
     0 3px 10px rgba(0, 0, 0, 0.15);
 }
 
+.playstatebutton-icon-played {
+  color: var(--primary-accent-color);
+}
+
 /* Navigation */
 .headerButton {
   margin: 0 !important;

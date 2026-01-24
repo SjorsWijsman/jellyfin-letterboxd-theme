@@ -312,8 +312,18 @@ h1 * {
   opacity: 0;
 }
 
-.playstatebutton-icon-played {
-  color: var(--primary-accent-color);
+.cardText-first {
+  padding: 0.3em 0 0.15em;
+  white-space: wrap;
+}
+
+.cardText-first bdi {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  white-space: wrap;
+  line-height: 1.2;
 }
 
 /* Navigation */
@@ -414,4 +424,9 @@ h1 * {
   font-size: 1.15rem !important;
   color: #99aabb;
   line-height: 1.38461538;
+}
+
+/* Misc */
+.playstatebutton-icon-played {
+  color: var(--primary-accent-color);
 }

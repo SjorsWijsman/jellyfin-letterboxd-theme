@@ -221,6 +221,10 @@
     PitchSansWeb, Menlo, "Droid Sans Mono", "Lucida Console", Consolas, Monaco,
     Courier, monospace, ColorEmoji;
 
+  --detailPageContentWidth: 80rem;
+  --posterSize: 16rem;
+  --posterGap: 3rem;
+
   color: #ddeeff;
 }
 
@@ -379,7 +383,9 @@ h1 * {
 }
 
 /* Detail Page */
-.detailLogo, .layout-desktop .detailLogo, .layout-tv .detailLogo {
+.detailLogo,
+.layout-desktop .detailLogo,
+.layout-tv .detailLogo {
   background-position-y: bottom;
   width: 40vw;
   left: 50% !important;
@@ -388,28 +394,56 @@ h1 * {
 }
 
 .detailPageWrapperContainer {
-  background: linear-gradient( to bottom, transparent 0, var(--primary-background-color) min(100%, 24rem) ) !important;
-  --detailPageContentWidth: 96rem;
+  background: linear-gradient(
+    to bottom,
+    transparent 0,
+    var(--primary-background-color) min(100%, 24rem)
+  ) !important;
 }
 
 .detailPageWrapperContainer .detailPagePrimaryContainer {
   background: transparent !important;
   max-width: var(--detailPageContentWidth);
   margin: 0 auto;
-} 
+  grid-template-columns: var(--posterSize) 1fr !important;
+}
+
+.detailPageWrapperContainer .detailImageContainer {
+  position: relative;
+}
+
+.detailPageWrapperContainer .detailImageContainer .card {
+  width: 100% !important;
+  max-width: unset !important;
+  position: sticky !important;
+  top: 2rem !important;
+}
 
 .detailPageWrapperContainer .infoWrapper {
   margin-top: 270px !important;
-  margin-left: 20.45vw !important;
+  margin-left: calc(var(--posterSize) + var(--posterGap)) !important;
 }
 
 .detailPageWrapperContainer .detailSectionContent {
   padding-left: 0 !important;
 }
 
-.detailPageWrapperContainer .detailSectionContent, 
-.trackSelections, 
-.detailPageWrapperContainer .detailsGroupItem, 
+.layout-desktop .detailPageWrapperContainer .detailSectionContent,
+.layout-desktop .detailPageWrapperContainer .trackSelections,
+.layout-desktop .detailPageWrapperContainer .itemDetailsGroup {
+  margin-left: var(--posterGap) !important;
+}
+
+.layout-desktop .detailSectionContent,
+.trackSelections,
+.layout-desktop .detailsGroupItem,
+.layout-desktop .localnav {
+  border-width: 0px !important;
+}
+
+.detailPageWrapperContainer .detailSectionContent,
+.trackSelections,
+.detailPageWrapperContainer .detailsGroupItem,
 .detailPageWrapperContainer .localnav {
   background: transparent !important;
 }
@@ -442,7 +476,7 @@ h1 * {
   font-size: 1rem !important;
   font-weight: light;
   color: #99aabb;
-  letter-spacing: .075em;
+  letter-spacing: 0.075em;
 }
 
 .detailPageWrapperContainer .overview * {
@@ -467,7 +501,7 @@ h1 * {
 .detailPageWrapperContainer .itemExternalLinks a,
 .detailPageWrapperContainer .itemDetailsGroup .content a {
   color: #9ab !important;
-  font-size: .9rem !important;
+  font-size: 0.9rem !important;
   margin-right: 5px;
   margin-bottom: 5px;
 }
@@ -478,9 +512,9 @@ h1 * {
 
 .detailPageWrapperContainer .itemExternalLinks::before {
   content: "More at";
-  font-size: .9rem !important;
+  font-size: 0.9rem !important;
   color: #9ab !important;
-  margin-right: .3rem;
+  margin-right: 0.3rem;
 }
 
 .detailPageWrapperContainer .itemExternalLinks a {
@@ -488,9 +522,9 @@ h1 * {
   background-color: transparent !important;
   padding: 4px 5px 3px;
   border: 2px solid #303840;
-  font-size: .75rem !important;
+  font-size: 0.75rem !important;
   text-transform: uppercase;
-  letter-spacing: .075em;
+  letter-spacing: 0.075em;
   border-radius: 2px;
 }
 
@@ -499,7 +533,7 @@ h1 * {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  margin-left: 1.7rem !important;
+  margin-left: var(--posterGap) !important;
   margin-top: 1rem !important;
   margin-bottom: 1.5rem !important;
   padding: 0 !important;
@@ -520,7 +554,7 @@ h1 * {
   font-size: 0.9rem !important;
   font-weight: 400;
   color: #789;
-  letter-spacing: .075em;
+  letter-spacing: 0.075em;
   border-bottom: 1px dotted #456;
   width: 8rem;
 }
@@ -530,18 +564,25 @@ h1 * {
   padding: 6px 6px !important;
   white-space: nowrap;
   border-radius: 3px !important;
-  box-shadow: inset 0 1px rgba(255,255,255,.05);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.05);
   line-height: 1.5;
   margin: 0 !important;
-  font-size: .9rem;
+  font-size: 0.9rem;
   border: 0px solid transparent !important;
 }
 
 .detailPageWrapperContainer .detailSection .trackSelections select:disabled {
-  color: #9ab !important
+  color: #9ab !important;
 }
 
-.detailPageWrapperContainer .detailSection .trackSelections .selectArrowContainer {
+.detailPageWrapperContainer .detailSection .trackSelections select:focus {
+  background: #404850 !important;
+}
+
+.detailPageWrapperContainer
+  .detailSection
+  .trackSelections
+  .selectArrowContainer {
   transform: translateY(10%);
 }
 
@@ -563,9 +604,9 @@ h1 * {
   padding: 3px 6px;
   white-space: nowrap;
   border-radius: 3px;
-  box-shadow: inset 0 1px rgba(255,255,255,.05);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.05);
   line-height: 1.5;
-  font-size: .9rem;
+  font-size: 0.9rem;
   font-weight: 400;
 }
 

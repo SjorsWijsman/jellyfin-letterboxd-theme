@@ -753,7 +753,14 @@ Detail Page
   padding: 0;
 }
 
-.button-link.emby-button {
+/*
+-----------------------------------------------------------------
+Tags
+-----------------------------------------------------------------
+*/
+
+.button-link.emby-button,
+.mediaInfoOfficialRating {
   color: var(--color-text-gray) !important;
   background: #283038;
   text-transform: capitalize;

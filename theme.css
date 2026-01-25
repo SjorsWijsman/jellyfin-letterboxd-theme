@@ -571,6 +571,7 @@ Detail Page
   gap: 0.25rem;
   align-items: center;
   margin-right: 1rem !important;
+  padding-right: 1.45em !important;
 }
 
 .detailPagePrimaryContainer .detailRibbon .mainDetailButtons .btnPlay:hover {
@@ -578,7 +579,7 @@ Detail Page
   background: var(--color-green-dark);
 }
 
-.detailPagePrimaryContainer .detailRibbon .mainDetailButtons .btnPlay::before {
+.detailPagePrimaryContainer .detailRibbon .mainDetailButtons .btnPlay::after {
   content: "Play";
   transform: translateY(-0.05em);
 }

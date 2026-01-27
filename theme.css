@@ -296,7 +296,11 @@ html,
   background-color: var(--color-background);
 }
 
-.collapseContent, .formDialogFooter:not(.formDialogFooter-clear), .formDialogHeader:not(.formDialogHeader-clear), .paperList, .visualCardBox {
+.collapseContent,
+.formDialogFooter:not(.formDialogFooter-clear),
+.formDialogHeader:not(.formDialogHeader-clear),
+.paperList,
+.visualCardBox {
   background-color: var(--color-background-dark);
 }
 
@@ -577,21 +581,34 @@ Detail Page
 }
 
 .detailPagePrimaryContainer .detailRibbon .mainDetailButtons .btnPlay::after {
-  content: 'Play';
+  content: "Play";
   transform: translateY(-0.05em);
 }
 
-.detailPagePrimaryContainer .detailRibbon .mainDetailButtons .btnPlay ~ :not(.hide) {
+.detailPagePrimaryContainer
+  .detailRibbon
+  .mainDetailButtons
+  .btnPlay
+  ~ :not(.hide) {
   border-radius: 9999px 0 0 9999px;
   padding-left: 0.25rem;
 }
 
-.detailPagePrimaryContainer .detailRibbon .mainDetailButtons .btnPlay ~ :not(.hide) ~ :not(.hide) {
+.detailPagePrimaryContainer
+  .detailRibbon
+  .mainDetailButtons
+  .btnPlay
+  ~ :not(.hide)
+  ~ :not(.hide) {
   border-radius: unset;
   background-color: var(--color-background);
 }
 
-.detailPagePrimaryContainer .detailRibbon .mainDetailButtons .btnPlay ~ :not(.hide):last-child {
+.detailPagePrimaryContainer
+  .detailRibbon
+  .mainDetailButtons
+  .btnPlay
+  ~ :not(.hide):last-child {
   border-radius: 0 9999px 9999px 0;
   padding-right: 0.25rem;
 }
@@ -641,7 +658,10 @@ Detail Page
   margin: 0;
 }
 
-.detailPagePrimaryContainer .detailPagePrimaryContent .detailSectionContent *:empty {
+.detailPagePrimaryContainer
+  .detailPagePrimaryContent
+  .detailSectionContent
+  *:empty {
   display: none;
 }
 
@@ -781,6 +801,10 @@ List Page
 -----------------------------------------------------------------
 */
 
+[dir="ltr"] .listItem {
+  padding: 0.5rem 0.25rem;
+}
+
 .listItem:hover {
   background-color: var(--color-background-dark);
 }
@@ -793,35 +817,45 @@ List Page
   border-color: var(--color-background-muted) !important;
 }
 
+.listItem .listItemImage {
+  border-radius: var(--rounded);
+  box-shadow: var(--card-outline);
+}
+
+.listItem .listItemImage .playedIndicator {
+  display: none;
+}
+
+.listItem .listItemImage:has(.playedIndicator) {
+  opacity: 0.2;
+}
+
 .listItem.listItem-largeImage {
   padding: 0;
   margin-top: 1rem;
 }
 
-.listItem.listItem-largeImage:first-of-type  {
+.listItem.listItem-largeImage:first-of-type {
   margin-top: 3rem;
 }
 
 .listItem-largeImage .listItemBody .listItem-overview {
-  transition: filter .5s ease-out;
+  transition: filter 0.5s ease-out;
   filter: blur(1rem);
   line-height: 1.4;
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 3;
-          line-clamp: 3; 
+  line-clamp: 3;
   -webkit-box-orient: vertical;
 }
 
 .listItem-largeImage:first-of-type .listItem-overview,
 .listItem-largeImage:has(button[data-played="true"]) .listItem-overview,
-.listItem-largeImage:has(button[data-played="true"]) + .listItem-largeImage .listItem-overview {
+.listItem-largeImage:has(button[data-played="true"])
+  + .listItem-largeImage
+  .listItem-overview {
   filter: none;
-}
-
-.listItem-largeImage .listItemImage-large {
-  border-radius: var(--rounded);
-  box-shadow: var(--card-outline);
 }
 
 /*

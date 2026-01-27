@@ -296,11 +296,7 @@ html,
   background-color: var(--color-background);
 }
 
-.collapseContent,
-.formDialogFooter:not(.formDialogFooter-clear),
-.formDialogHeader:not(.formDialogHeader-clear),
-.paperList,
-.visualCardBox {
+.collapseContent, .formDialogFooter:not(.formDialogFooter-clear), .formDialogHeader:not(.formDialogHeader-clear), .paperList, .visualCardBox {
   background-color: var(--color-background-dark);
 }
 
@@ -485,8 +481,9 @@ Detail Page
 .detailPageWrapperContainer {
   background: linear-gradient(
     to bottom,
-    transparent 0,
-    var(--color-background) min(100%, 24rem)
+    #1d222900,
+    var(--color-background) min(100%, 24rem),
+    var(--color-background)
   );
 }
 
@@ -580,34 +577,21 @@ Detail Page
 }
 
 .detailPagePrimaryContainer .detailRibbon .mainDetailButtons .btnPlay::after {
-  content: "Play";
+  content: 'Play';
   transform: translateY(-0.05em);
 }
 
-.detailPagePrimaryContainer
-  .detailRibbon
-  .mainDetailButtons
-  .btnPlay
-  ~ :not(.hide) {
+.detailPagePrimaryContainer .detailRibbon .mainDetailButtons .btnPlay ~ :not(.hide) {
   border-radius: 9999px 0 0 9999px;
   padding-left: 0.25rem;
 }
 
-.detailPagePrimaryContainer
-  .detailRibbon
-  .mainDetailButtons
-  .btnPlay
-  ~ :not(.hide)
-  ~ :not(.hide) {
+.detailPagePrimaryContainer .detailRibbon .mainDetailButtons .btnPlay ~ :not(.hide) ~ :not(.hide) {
   border-radius: unset;
   background-color: var(--color-background);
 }
 
-.detailPagePrimaryContainer
-  .detailRibbon
-  .mainDetailButtons
-  .btnPlay
-  ~ :not(.hide):last-child {
+.detailPagePrimaryContainer .detailRibbon .mainDetailButtons .btnPlay ~ :not(.hide):last-child {
   border-radius: 0 9999px 9999px 0;
   padding-right: 0.25rem;
 }
@@ -621,8 +605,11 @@ Detail Page
   grid-template-areas:
     "description"
     "tracks"
-    "tags";
+    "tags"
+    "next-up"
+    "seasons";
   grid-template-columns: 1fr;
+  grid-template-rows: auto;
 }
 
 .detailPagePrimaryContainer .detailPagePrimaryContent .trackSelections {
@@ -641,14 +628,20 @@ Detail Page
   grid-area: tags;
 }
 
+.detailPagePrimaryContainer .detailPagePrimaryContent .nextUpSection {
+  grid-area: next-up;
+  margin-top: 2rem;
+}
+
+.detailPagePrimaryContainer .detailPagePrimaryContent #listChildrenCollapsible {
+  grid-area: seasons;
+}
+
 .detailPagePrimaryContainer .detailPagePrimaryContent .detailSectionContent * {
   margin: 0;
 }
 
-.detailPagePrimaryContainer
-  .detailPagePrimaryContent
-  .detailSectionContent
-  *:empty {
+.detailPagePrimaryContainer .detailPagePrimaryContent .detailSectionContent *:empty {
   display: none;
 }
 
@@ -759,7 +752,8 @@ Tags
 -----------------------------------------------------------------
 */
 
-.button-link.emby-button,
+.detailsGroupItem .button-link.emby-button,
+.itemTags .button-link.emby-button,
 .mediaInfoOfficialRating {
   color: var(--color-text-gray) !important;
   background: #283038;
@@ -797,6 +791,37 @@ List Page
 
 .listItem-border {
   border-color: var(--color-background-muted) !important;
+}
+
+.listItem.listItem-largeImage {
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.listItem.listItem-largeImage:first-of-type  {
+  margin-top: 3rem;
+}
+
+.listItem-largeImage .listItemBody .listItem-overview {
+  transition: filter .5s ease-out;
+  filter: blur(1rem);
+  line-height: 1.4;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+          line-clamp: 3; 
+  -webkit-box-orient: vertical;
+}
+
+.listItem-largeImage:first-of-type .listItem-overview,
+.listItem-largeImage:has(button[data-played="true"]) .listItem-overview,
+.listItem-largeImage:has(button[data-played="true"]) + .listItem-largeImage .listItem-overview {
+  filter: none;
+}
+
+.listItem-largeImage .listItemImage-large {
+  border-radius: var(--rounded);
+  box-shadow: var(--card-outline);
 }
 
 /*

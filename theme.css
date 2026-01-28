@@ -398,130 +398,60 @@ Lists
 */
 
 @media (min-width: 131.25em) {
-  [is="emby-itemscontainer"]:not(.scrollSlider)
-    :is(
-      .portraitCard,
-      .smallBackdropCard,
-      .squareCard,
-      .overflowPortraitCard,
-      .overflowSquareCard
-    ) {
+  [is="emby-itemscontainer"]:not(.scrollSlider) :is(.portraitCard, .smallBackdropCard, .squareCard, .overflowPortraitCard, .overflowSquareCard) {
     width: unset;
   }
 }
 
 @media (min-width: 120em) {
-  [is="emby-itemscontainer"]:not(.scrollSlider)
-    :is(
-      .portraitCard,
-      .smallBackdropCard,
-      .squareCard,
-      .overflowPortraitCard,
-      .overflowSquareCard
-    ) {
+  [is="emby-itemscontainer"]:not(.scrollSlider) :is(.portraitCard, .smallBackdropCard, .squareCard, .overflowPortraitCard, .overflowSquareCard) {
     width: unset;
   }
 }
 
 @media (min-width: 100em) {
-  [is="emby-itemscontainer"]:not(.scrollSlider)
-    :is(
-      .portraitCard,
-      .smallBackdropCard,
-      .squareCard,
-      .overflowPortraitCard,
-      .overflowSquareCard
-    ) {
+  [is="emby-itemscontainer"]:not(.scrollSlider) :is(.portraitCard, .smallBackdropCard, .squareCard, .overflowPortraitCard, .overflowSquareCard) {
     width: unset;
   }
 }
 
 @media (min-width: 87.5em) {
-  [is="emby-itemscontainer"]:not(.scrollSlider)
-    :is(
-      .portraitCard,
-      .smallBackdropCard,
-      .squareCard,
-      .overflowPortraitCard,
-      .overflowSquareCard
-    ) {
+  [is="emby-itemscontainer"]:not(.scrollSlider) :is(.portraitCard, .smallBackdropCard, .squareCard, .overflowPortraitCard, .overflowSquareCard) {
     width: unset;
   }
 }
 
 @media (min-width: 75em) {
-  [is="emby-itemscontainer"]:not(.scrollSlider)
-    :is(
-      .portraitCard,
-      .smallBackdropCard,
-      .squareCard,
-      .overflowPortraitCard,
-      .overflowSquareCard
-    ) {
+  [is="emby-itemscontainer"]:not(.scrollSlider) :is(.portraitCard, .smallBackdropCard, .squareCard, .overflowPortraitCard, .overflowSquareCard) {
     width: unset;
   }
 }
 
 @media (min-width: 50em) {
-  [is="emby-itemscontainer"]:not(.scrollSlider)
-    :is(
-      .portraitCard,
-      .smallBackdropCard,
-      .squareCard,
-      .overflowPortraitCard,
-      .overflowSquareCard
-    ) {
+  [is="emby-itemscontainer"]:not(.scrollSlider) :is(.portraitCard, .smallBackdropCard, .squareCard, .overflowPortraitCard, .overflowSquareCard) {
     width: unset;
   }
 }
 
 @media (min-width: 43.75em) {
-  [is="emby-itemscontainer"]:not(.scrollSlider)
-    :is(
-      .portraitCard,
-      .smallBackdropCard,
-      .squareCard,
-      .overflowPortraitCard,
-      .overflowSquareCard
-    ) {
+  [is="emby-itemscontainer"]:not(.scrollSlider) :is(.portraitCard, .smallBackdropCard, .squareCard, .overflowPortraitCard, .overflowSquareCard) {
     width: unset;
   }
 }
 
 @media (min-width: 31.25em) {
-  [is="emby-itemscontainer"]:not(.scrollSlider)
-    :is(
-      .portraitCard,
-      .smallBackdropCard,
-      .squareCard,
-      .overflowPortraitCard,
-      .overflowSquareCard
-    ) {
+  [is="emby-itemscontainer"]:not(.scrollSlider) :is(.portraitCard, .smallBackdropCard, .squareCard, .overflowPortraitCard, .overflowSquareCard) {
     width: unset;
   }
 }
 
 @media (min-width: 25em) {
-  [is="emby-itemscontainer"]:not(.scrollSlider)
-    :is(
-      .portraitCard,
-      .smallBackdropCard,
-      .squareCard,
-      .overflowPortraitCard,
-      .overflowSquareCard
-    ) {
+  [is="emby-itemscontainer"]:not(.scrollSlider) :is(.portraitCard, .smallBackdropCard, .squareCard, .overflowPortraitCard, .overflowSquareCard) {
     width: unset;
   }
 }
 
-[is="emby-itemscontainer"]:not(.scrollSlider)
-  :is(
-    .portraitCard,
-    .smallBackdropCard,
-    .squareCard,
-    .overflowPortraitCard,
-    .overflowSquareCard
-  ) {
+[is="emby-itemscontainer"]:not(.scrollSlider) :is(.portraitCard, .smallBackdropCard, .squareCard, .overflowPortraitCard, .overflowSquareCard) {
   width: unset;
 }
 
@@ -807,6 +737,7 @@ Detail Page
     "description"
     "tracks"
     "tags"
+    "collection-items"
     "next-up"
     "seasons";
   grid-template-columns: 1fr;
@@ -827,6 +758,11 @@ Detail Page
 
 .detailPagePrimaryContainer .detailPagePrimaryContent .itemDetailsGroup {
   grid-area: tags;
+}
+
+.detailPagePrimaryContainer .detailPagePrimaryContent .collectionItems {
+  grid-area: collection-items;
+  margin-top: 2rem;
 }
 
 .detailPagePrimaryContainer .detailPagePrimaryContent .nextUpSection {

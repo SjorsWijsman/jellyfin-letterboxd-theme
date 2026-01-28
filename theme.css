@@ -393,6 +393,151 @@ Header
 
 /*
 -----------------------------------------------------------------
+Lists
+-----------------------------------------------------------------
+*/
+
+@media (min-width: 131.25em) {
+  [is="emby-itemscontainer"]:not(.scrollSlider)
+    :is(
+      .portraitCard,
+      .smallBackdropCard,
+      .squareCard,
+      .overflowPortraitCard,
+      .overflowSquareCard
+    ) {
+    width: unset;
+  }
+}
+
+@media (min-width: 120em) {
+  [is="emby-itemscontainer"]:not(.scrollSlider)
+    :is(
+      .portraitCard,
+      .smallBackdropCard,
+      .squareCard,
+      .overflowPortraitCard,
+      .overflowSquareCard
+    ) {
+    width: unset;
+  }
+}
+
+@media (min-width: 100em) {
+  [is="emby-itemscontainer"]:not(.scrollSlider)
+    :is(
+      .portraitCard,
+      .smallBackdropCard,
+      .squareCard,
+      .overflowPortraitCard,
+      .overflowSquareCard
+    ) {
+    width: unset;
+  }
+}
+
+@media (min-width: 87.5em) {
+  [is="emby-itemscontainer"]:not(.scrollSlider)
+    :is(
+      .portraitCard,
+      .smallBackdropCard,
+      .squareCard,
+      .overflowPortraitCard,
+      .overflowSquareCard
+    ) {
+    width: unset;
+  }
+}
+
+@media (min-width: 75em) {
+  [is="emby-itemscontainer"]:not(.scrollSlider)
+    :is(
+      .portraitCard,
+      .smallBackdropCard,
+      .squareCard,
+      .overflowPortraitCard,
+      .overflowSquareCard
+    ) {
+    width: unset;
+  }
+}
+
+@media (min-width: 50em) {
+  [is="emby-itemscontainer"]:not(.scrollSlider)
+    :is(
+      .portraitCard,
+      .smallBackdropCard,
+      .squareCard,
+      .overflowPortraitCard,
+      .overflowSquareCard
+    ) {
+    width: unset;
+  }
+}
+
+@media (min-width: 43.75em) {
+  [is="emby-itemscontainer"]:not(.scrollSlider)
+    :is(
+      .portraitCard,
+      .smallBackdropCard,
+      .squareCard,
+      .overflowPortraitCard,
+      .overflowSquareCard
+    ) {
+    width: unset;
+  }
+}
+
+@media (min-width: 31.25em) {
+  [is="emby-itemscontainer"]:not(.scrollSlider)
+    :is(
+      .portraitCard,
+      .smallBackdropCard,
+      .squareCard,
+      .overflowPortraitCard,
+      .overflowSquareCard
+    ) {
+    width: unset;
+  }
+}
+
+@media (min-width: 25em) {
+  [is="emby-itemscontainer"]:not(.scrollSlider)
+    :is(
+      .portraitCard,
+      .smallBackdropCard,
+      .squareCard,
+      .overflowPortraitCard,
+      .overflowSquareCard
+    ) {
+    width: unset;
+  }
+}
+
+[is="emby-itemscontainer"]:not(.scrollSlider)
+  :is(
+    .portraitCard,
+    .smallBackdropCard,
+    .squareCard,
+    .overflowPortraitCard,
+    .overflowSquareCard
+  ) {
+  width: unset;
+}
+
+[is="emby-itemscontainer"]:not(.scrollSlider) {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+  gap: 1.5rem 1rem;
+  margin-top: 1rem;
+}
+
+[is="emby-itemscontainer"]:not(.scrollSlider) .card .cardBox {
+  margin: 0 !important;
+}
+
+/*
+-----------------------------------------------------------------
 Cards
 -----------------------------------------------------------------
 */
@@ -476,7 +621,7 @@ Detail Page
 .detailLogo,
 .layout-desktop .detailLogo,
 .layout-tv .detailLogo {
-  background-position-y: bottom;
+  background-position-y: center;
   height: 30rem;
   width: clamp(24rem, 40vw, 32rem);
   max-width: 90vw;
@@ -576,7 +721,7 @@ Detail Page
   position: absolute;
   top: 0;
   right: 0;
-  transform: translateY(calc(-100% - 2rem));
+  transform: translateY(calc(-100% - 4rem));
 }
 
 @media only screen and (max-width: 50rem) {
@@ -909,16 +1054,38 @@ Collection Page
 
 /*
 -----------------------------------------------------------------
+Action Sheet
+-----------------------------------------------------------------
+*/
+
+.actionSheetContent {
+  align-items: flex-start;
+  padding: 1rem !important;
+}
+
+.actionSheetTitle {
+  font-size: 1.2rem;
+}
+
+.actionSheetContent .listItem-border {
+  border-bottom: 1px solid var(--color-background-muted);
+}
+
+.actionSheetContent .listItem-border:last-of-type {
+  border-color: transparent !important;
+}
+
+/*
+-----------------------------------------------------------------
 Inputs
 -----------------------------------------------------------------
 */
 
-.emby-select-withcolor {
+.emby-select-withcolor,
+.emby-select-withcolor > option,
+.emby-input,
+.emby-textarea {
   border-color: var(--color-background-muted);
-  background-color: var(--color-background-dark);
-}
-
-.emby-select-withcolor > option {
   background-color: var(--color-background-dark);
 }
 

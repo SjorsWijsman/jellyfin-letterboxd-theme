@@ -860,6 +860,16 @@ List Page
 
 /*
 -----------------------------------------------------------------
+Collection Page
+-----------------------------------------------------------------
+*/
+
+.collectionItems .verticalSection > * {
+  padding: 0;
+}
+
+/*
+-----------------------------------------------------------------
 Misc
 -----------------------------------------------------------------
 */
@@ -870,4 +880,13 @@ Misc
 
 .ratingbutton-icon-withrating {
   color: var(--color-orange);
+}
+
+.overview-controls {
+  justify-content: start;
+  transform: translateY(-0.5rem);
+}
+
+.overview-controls .overview-expand {
+  padding: 0;
 }

@@ -477,10 +477,11 @@ Detail Page
 .layout-desktop .detailLogo,
 .layout-tv .detailLogo {
   background-position-y: bottom;
+  height: 30rem;
   width: clamp(24rem, 40vw, 32rem);
   max-width: 90vw;
   left: 50%;
-  top: 12rem;
+  top: 4rem;
   transform: translateX(-50%);
 }
 
@@ -904,6 +905,21 @@ Collection Page
 
 .collectionItems .verticalSection > * {
   padding: 0;
+}
+
+/*
+-----------------------------------------------------------------
+Inputs
+-----------------------------------------------------------------
+*/
+
+.emby-select-withcolor {
+  border-color: var(--color-background-muted);
+  background-color: var(--color-background-dark);
+}
+
+.emby-select-withcolor > option {
+  background-color: var(--color-background-dark);
 }
 
 /*

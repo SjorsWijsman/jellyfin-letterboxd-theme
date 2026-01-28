@@ -259,6 +259,7 @@ Base style
 
 * {
   font-family: var(--font-stack-graphik);
+  box-sizing: border-box;
 }
 
 h1,
@@ -477,9 +478,16 @@ Detail Page
 .layout-tv .detailLogo {
   background-position-y: bottom;
   width: clamp(24rem, 40vw, 32rem);
+  max-width: 90vw;
   left: 50%;
   top: 12rem;
   transform: translateX(-50%);
+}
+
+@media (max-width: 68.75em) {
+  .detailLogo {
+    display: inline-block;
+  }
 }
 
 .detailPageWrapperContainer {
@@ -500,7 +508,9 @@ Detail Page
 .detailPageWrapperContainer .detailPagePrimaryContainer,
 .detailPageWrapperContainer .detailPageSecondaryContainer {
   max-width: var(--detail-page-width);
+  width: 100%;
   margin: 0 auto;
+  padding: 1rem 2rem;
 }
 
 .detailPagePrimaryContainer {
@@ -512,6 +522,16 @@ Detail Page
   grid-template-columns: var(--detail-page-poster-size) auto;
   gap: 1rem var(--detail-page-poster-gap);
   padding: 0 2rem;
+}
+
+@media only screen and (max-width: 50rem) {
+  .detailPagePrimaryContainer {
+    grid-template-areas:
+      "image ribbon"
+      "details details";
+    --detail-page-poster-gap: 2rem;
+    --detail-page-poster-size: 12rem;
+  }
 }
 
 .detailPagePrimaryContainer > * {
@@ -533,11 +553,6 @@ Detail Page
   max-width: unset;
 }
 
-.detailPagePrimaryContainer .detailRibbon {
-  grid-area: ribbon;
-  height: unset;
-}
-
 .detailPagePrimaryContainer .infoWrapper .nameContainer {
   display: flex;
   flex-direction: row;
@@ -551,11 +566,34 @@ Detail Page
   color: var(--color-text-muted);
 }
 
+.detailPagePrimaryContainer .detailRibbon {
+  grid-area: ribbon;
+  height: unset;
+}
+
 .detailPagePrimaryContainer .detailRibbon .mainDetailButtons {
   position: absolute;
   top: 0;
   right: 0;
   transform: translateY(calc(-100% - 2rem));
+}
+
+@media only screen and (max-width: 50rem) {
+  .detailPagePrimaryContainer .detailRibbon {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .detailPagePrimaryContainer .infoWrapper {
+    webkit-flex: 0;
+    flex: 0;
+  }
+
+  .detailPagePrimaryContainer .detailRibbon .mainDetailButtons {
+    position: relative;
+    transform: none;
+  }
 }
 
 .detailPagePrimaryContainer .detailRibbon .mainDetailButtons > * {

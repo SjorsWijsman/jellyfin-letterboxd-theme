@@ -398,60 +398,130 @@ Lists
 */
 
 @media (min-width: 131.25em) {
-  [is="emby-itemscontainer"]:not(.scrollSlider) :is(.portraitCard, .smallBackdropCard, .squareCard, .overflowPortraitCard, .overflowSquareCard) {
+  [is="emby-itemscontainer"]:not(.scrollSlider)
+    :is(
+      .portraitCard,
+      .smallBackdropCard,
+      .squareCard,
+      .overflowPortraitCard,
+      .overflowSquareCard
+    ) {
     width: unset;
   }
 }
 
 @media (min-width: 120em) {
-  [is="emby-itemscontainer"]:not(.scrollSlider) :is(.portraitCard, .smallBackdropCard, .squareCard, .overflowPortraitCard, .overflowSquareCard) {
+  [is="emby-itemscontainer"]:not(.scrollSlider)
+    :is(
+      .portraitCard,
+      .smallBackdropCard,
+      .squareCard,
+      .overflowPortraitCard,
+      .overflowSquareCard
+    ) {
     width: unset;
   }
 }
 
 @media (min-width: 100em) {
-  [is="emby-itemscontainer"]:not(.scrollSlider) :is(.portraitCard, .smallBackdropCard, .squareCard, .overflowPortraitCard, .overflowSquareCard) {
+  [is="emby-itemscontainer"]:not(.scrollSlider)
+    :is(
+      .portraitCard,
+      .smallBackdropCard,
+      .squareCard,
+      .overflowPortraitCard,
+      .overflowSquareCard
+    ) {
     width: unset;
   }
 }
 
 @media (min-width: 87.5em) {
-  [is="emby-itemscontainer"]:not(.scrollSlider) :is(.portraitCard, .smallBackdropCard, .squareCard, .overflowPortraitCard, .overflowSquareCard) {
+  [is="emby-itemscontainer"]:not(.scrollSlider)
+    :is(
+      .portraitCard,
+      .smallBackdropCard,
+      .squareCard,
+      .overflowPortraitCard,
+      .overflowSquareCard
+    ) {
     width: unset;
   }
 }
 
 @media (min-width: 75em) {
-  [is="emby-itemscontainer"]:not(.scrollSlider) :is(.portraitCard, .smallBackdropCard, .squareCard, .overflowPortraitCard, .overflowSquareCard) {
+  [is="emby-itemscontainer"]:not(.scrollSlider)
+    :is(
+      .portraitCard,
+      .smallBackdropCard,
+      .squareCard,
+      .overflowPortraitCard,
+      .overflowSquareCard
+    ) {
     width: unset;
   }
 }
 
 @media (min-width: 50em) {
-  [is="emby-itemscontainer"]:not(.scrollSlider) :is(.portraitCard, .smallBackdropCard, .squareCard, .overflowPortraitCard, .overflowSquareCard) {
+  [is="emby-itemscontainer"]:not(.scrollSlider)
+    :is(
+      .portraitCard,
+      .smallBackdropCard,
+      .squareCard,
+      .overflowPortraitCard,
+      .overflowSquareCard
+    ) {
     width: unset;
   }
 }
 
 @media (min-width: 43.75em) {
-  [is="emby-itemscontainer"]:not(.scrollSlider) :is(.portraitCard, .smallBackdropCard, .squareCard, .overflowPortraitCard, .overflowSquareCard) {
+  [is="emby-itemscontainer"]:not(.scrollSlider)
+    :is(
+      .portraitCard,
+      .smallBackdropCard,
+      .squareCard,
+      .overflowPortraitCard,
+      .overflowSquareCard
+    ) {
     width: unset;
   }
 }
 
 @media (min-width: 31.25em) {
-  [is="emby-itemscontainer"]:not(.scrollSlider) :is(.portraitCard, .smallBackdropCard, .squareCard, .overflowPortraitCard, .overflowSquareCard) {
+  [is="emby-itemscontainer"]:not(.scrollSlider)
+    :is(
+      .portraitCard,
+      .smallBackdropCard,
+      .squareCard,
+      .overflowPortraitCard,
+      .overflowSquareCard
+    ) {
     width: unset;
   }
 }
 
 @media (min-width: 25em) {
-  [is="emby-itemscontainer"]:not(.scrollSlider) :is(.portraitCard, .smallBackdropCard, .squareCard, .overflowPortraitCard, .overflowSquareCard) {
+  [is="emby-itemscontainer"]:not(.scrollSlider)
+    :is(
+      .portraitCard,
+      .smallBackdropCard,
+      .squareCard,
+      .overflowPortraitCard,
+      .overflowSquareCard
+    ) {
     width: unset;
   }
 }
 
-[is="emby-itemscontainer"]:not(.scrollSlider) :is(.portraitCard, .smallBackdropCard, .squareCard, .overflowPortraitCard, .overflowSquareCard) {
+[is="emby-itemscontainer"]:not(.scrollSlider)
+  :is(
+    .portraitCard,
+    .smallBackdropCard,
+    .squareCard,
+    .overflowPortraitCard,
+    .overflowSquareCard
+  ) {
   width: unset;
 }
 
@@ -464,6 +534,20 @@ Lists
 
 [is="emby-itemscontainer"]:not(.scrollSlider) .card .cardBox {
   margin: 0 !important;
+}
+
+[is="emby-itemscontainer"]:not(.scrollSlider):has([data-playlistitemid]) {
+  gap: 0;
+}
+
+[data-playlistitemid] {
+  grid-column: 1/-1;
+}
+
+[data-playlistitemid] .listItemImage {
+  height: 6rem;
+  width: 4rem;
+  margin: 0.25rem 0;
 }
 
 /*
@@ -550,14 +634,16 @@ Detail Page
 
 .detailLogo,
 .layout-desktop .detailLogo,
-.layout-tv .detailLogo {
+.layout-tv .detailLogo,
+.layout-mobile .detailLogo {
   background-position-y: center;
-  height: 30rem;
+  height: 20rem;
   width: clamp(24rem, 40vw, 32rem);
   max-width: 90vw;
   left: 50%;
-  top: 4rem;
+  top: 8rem;
   transform: translateX(-50%);
+  display: inline-block !important;
 }
 
 @media (max-width: 68.75em) {
@@ -589,7 +675,7 @@ Detail Page
   padding: 1rem 2rem;
 }
 
-.detailPagePrimaryContainer {
+.detailPageWrapperContainer .detailPagePrimaryContainer {
   display: grid;
   grid-template-areas:
     "image ribbon"
@@ -884,6 +970,40 @@ Detail Page
 
 .detailPageSecondaryContainer .detailPageContent {
   padding: 0;
+}
+
+.layout-mobile .itemBackdrop::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, #1d222900, var(--color-background));
+}
+
+.layout-mobile .detailImageContainer {
+  display: inline-block !important;
+}
+
+.layout-mobile [dir="ltr"] .infoWrapper {
+  padding: 0;
+}
+
+.layout-mobile .itemMiscInfo,
+.layout-mobile .itemName,
+.layout-mobile .mainDetailButtons,
+.layout-mobile .parentName {
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.layout-mobile .detailPagePrimaryContent {
+  padding: 0 !important;
+}
+
+.layout-mobile .detailRibbon .detailImageContainer {
+  display: none !important;
 }
 
 /*

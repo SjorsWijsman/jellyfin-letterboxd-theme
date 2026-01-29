@@ -280,6 +280,13 @@ h1 * {
   color: var(--color-text-muted);
 }
 
+.layout-mobile .itemMiscInfo,
+.layout-mobile .itemName,
+.layout-mobile .mainDetailButtons,
+.layout-mobile .parentName {
+  text-align: start;
+}
+
 /*
 -----------------------------------------------------------------
 Background
@@ -398,130 +405,60 @@ Lists
 */
 
 @media (min-width: 131.25em) {
-  [is="emby-itemscontainer"]:not(.scrollSlider)
-    :is(
-      .portraitCard,
-      .smallBackdropCard,
-      .squareCard,
-      .overflowPortraitCard,
-      .overflowSquareCard
-    ) {
+  [is="emby-itemscontainer"]:not(.scrollSlider) .card {
     width: unset;
   }
 }
 
 @media (min-width: 120em) {
-  [is="emby-itemscontainer"]:not(.scrollSlider)
-    :is(
-      .portraitCard,
-      .smallBackdropCard,
-      .squareCard,
-      .overflowPortraitCard,
-      .overflowSquareCard
-    ) {
+  [is="emby-itemscontainer"]:not(.scrollSlider) .card {
     width: unset;
   }
 }
 
 @media (min-width: 100em) {
-  [is="emby-itemscontainer"]:not(.scrollSlider)
-    :is(
-      .portraitCard,
-      .smallBackdropCard,
-      .squareCard,
-      .overflowPortraitCard,
-      .overflowSquareCard
-    ) {
+  [is="emby-itemscontainer"]:not(.scrollSlider) .card {
     width: unset;
   }
 }
 
 @media (min-width: 87.5em) {
-  [is="emby-itemscontainer"]:not(.scrollSlider)
-    :is(
-      .portraitCard,
-      .smallBackdropCard,
-      .squareCard,
-      .overflowPortraitCard,
-      .overflowSquareCard
-    ) {
+  [is="emby-itemscontainer"]:not(.scrollSlider) .card {
     width: unset;
   }
 }
 
 @media (min-width: 75em) {
-  [is="emby-itemscontainer"]:not(.scrollSlider)
-    :is(
-      .portraitCard,
-      .smallBackdropCard,
-      .squareCard,
-      .overflowPortraitCard,
-      .overflowSquareCard
-    ) {
+  [is="emby-itemscontainer"]:not(.scrollSlider) .card {
     width: unset;
   }
 }
 
 @media (min-width: 50em) {
-  [is="emby-itemscontainer"]:not(.scrollSlider)
-    :is(
-      .portraitCard,
-      .smallBackdropCard,
-      .squareCard,
-      .overflowPortraitCard,
-      .overflowSquareCard
-    ) {
+  [is="emby-itemscontainer"]:not(.scrollSlider) .card {
     width: unset;
   }
 }
 
 @media (min-width: 43.75em) {
-  [is="emby-itemscontainer"]:not(.scrollSlider)
-    :is(
-      .portraitCard,
-      .smallBackdropCard,
-      .squareCard,
-      .overflowPortraitCard,
-      .overflowSquareCard
-    ) {
+  [is="emby-itemscontainer"]:not(.scrollSlider) .card {
     width: unset;
   }
 }
 
 @media (min-width: 31.25em) {
-  [is="emby-itemscontainer"]:not(.scrollSlider)
-    :is(
-      .portraitCard,
-      .smallBackdropCard,
-      .squareCard,
-      .overflowPortraitCard,
-      .overflowSquareCard
-    ) {
+  [is="emby-itemscontainer"]:not(.scrollSlider) .card {
     width: unset;
   }
 }
 
 @media (min-width: 25em) {
-  [is="emby-itemscontainer"]:not(.scrollSlider)
-    :is(
-      .portraitCard,
-      .smallBackdropCard,
-      .squareCard,
-      .overflowPortraitCard,
-      .overflowSquareCard
-    ) {
+  [is="emby-itemscontainer"]:not(.scrollSlider) .card {
     width: unset;
   }
 }
 
-[is="emby-itemscontainer"]:not(.scrollSlider)
-  :is(
-    .portraitCard,
-    .smallBackdropCard,
-    .squareCard,
-    .overflowPortraitCard,
-    .overflowSquareCard
-  ) {
+[is="emby-itemscontainer"]:not(.scrollSlider) .card {
   width: unset;
 }
 
@@ -532,6 +469,16 @@ Lists
   margin-top: 1rem;
 }
 
+[is="emby-itemscontainer"]:not(.scrollSlider):has(.BackdropCard) {
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+}
+
+@media only screen and (max-width: 30rem) {
+  [is="emby-itemscontainer"]:not(.scrollSlider) {
+    grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+  }
+}
+
 [is="emby-itemscontainer"]:not(.scrollSlider) .card .cardBox {
   margin: 0 !important;
 }
@@ -540,7 +487,7 @@ Lists
   gap: 0;
 }
 
-[data-playlistitemid] {
+[data-playlistitemid], .listItem-largeImage {
   grid-column: 1/-1;
 }
 
@@ -687,12 +634,36 @@ Detail Page
 }
 
 @media only screen and (max-width: 50rem) {
-  .detailPagePrimaryContainer {
+  .detailPageWrapperContainer .detailPagePrimaryContainer {
     grid-template-areas:
-      "image ribbon"
+      "image   ribbon"
       "details details";
     --detail-page-poster-gap: 2rem;
     --detail-page-poster-size: 12rem;
+  }
+}
+
+@media only screen and (max-width: 30rem) {
+  .detailPageWrapperContainer {
+    margin-top: -8rem;
+  }
+  
+  .detailPageWrapperContainer .detailPagePrimaryContainer {
+    grid-template-areas:
+      "image   image"
+      "ribbon  ribbon"
+      "details details";
+  }
+
+  .detailLogo,
+  .layout-desktop .detailLogo,
+  .layout-tv .detailLogo,
+  .layout-mobile .detailLogo {
+    display: none !important;
+  }
+  
+  .detailImageContainer {
+    max-width: var(--detail-page-poster-size);
   }
 }
 

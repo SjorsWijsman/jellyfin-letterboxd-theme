@@ -9,5 +9,5 @@ As a Letterboxd junkie I wanted a Jellyfin theme to fit the Letterboxd aesthetic
 # Usage
 
 ```
-@import url("https://rawcdn.githack.com/SjorsWijsman/jellyfin-letterboxd-theme/refs/heads/main/theme.css");
+@import url("https://cdn.jsdelivr.net/gh/SjorsWijsman/jellyfin-letterboxd-theme@main/theme.css");
 ```

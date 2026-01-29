@@ -469,13 +469,17 @@ Lists
   margin-top: 1rem;
 }
 
-[is="emby-itemscontainer"]:not(.scrollSlider):has(.BackdropCard) {
+[is="emby-itemscontainer"]:not(.scrollSlider):has(.BackdropCard, .overflowBackdropCard) {
   grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
 }
 
 @media only screen and (max-width: 30rem) {
   [is="emby-itemscontainer"]:not(.scrollSlider) {
     grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+  }
+
+  [is="emby-itemscontainer"]:not(.scrollSlider):has(.BackdropCard, .overflowBackdropCard) {
+    grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
   }
 }
 
